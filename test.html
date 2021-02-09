@@ -8,28 +8,7 @@
   </head>
   <body>
     <script>
-      const cartArr = [];
-      let cartView = [];
-
-      // Person array with name and Age
-      const person = [
-        {
-          name: "Jim",
-          color: "blue",
-          age: 22,
-        },
-        {
-          name: "Sam",
-          color: "blue",
-          age: 33,
-        },
-        {
-          name: "Eddie",
-          color: "green",
-          age: 77,
-        },
-      ];
-
+      const cart = [];
       const items = [
         {
           id: 0,
@@ -46,40 +25,29 @@
       ];
 
       const addToCart = (item) => {
-        cartArr.push(item);
+        cart.push(item);
+      };
 
-        let reducedCart = cartArr.reduce((r, a) => {
-          r[a.id] = r[a.id] || [];
-          r[a.id].push(a);
-          return r;
-        }, Object.create(null));
-
-        cartView = reducedCart;
+      const reduceCart = (cart) => {
+        const res = {};
+        cart.forEach((obj) => {
+          const key = `${obj.id}${obj.name}`;
+          if (!res[key]) {
+            res[key] = { ...obj, quantity: 0 };
+          }
+          res[key].quantity += 1;
+        });
+        return Object.values(res);
       };
 
       addToCart(items[0]);
       addToCart(items[1]);
       addToCart(items[0]);
       addToCart(items[1]);
+      addToCart(items[0]);
+      addToCart(items[1]);
 
-      //   console.log(cartView);
-
-      // Accepts the array and key
-      const groupBy = (array, key) => {
-        // Return the end result
-        return array.reduce((result, currentValue) => {
-          // If an array already present for key, push it to the array. Else create an array and push the object
-          (result[currentValue[key]] = result[currentValue[key]] || []).push(
-            currentValue
-          );
-          // Return the current iteration `result` value, this will be taken as next iteration `result` value and accumulate
-          return result;
-        }, {}); // empty object is the initial value for result object
-      };
-
-      // Group by color as key to the person array
-      const personGroupedByColor = groupBy(person, "color");
-      console.log(personGroupedByColor);
+      console.log(reduceCart(cart));
     </script>
   </body>
 </html>
