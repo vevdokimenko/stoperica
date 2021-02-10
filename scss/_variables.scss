@@ -1,0 +1,24 @@
+:root {
+  --color-white: #d9d9d9;
+  --color-black: #010101;
+  --color-dark: #1c1c1e;
+  --color-grey: #39383d;
+  --color-yellow: #feea41;
+
+  --border: 1px solid #333333;
+
+  --filter-green: invert(79%) sepia(14%) saturate(5739%) hue-rotate(117deg)
+    brightness(91%) contrast(101%);
+  --filter-white: invert(89%) sepia(0%) saturate(45%) hue-rotate(182deg)
+    brightness(97%) contrast(98%);
+  --filter-red: invert(26%) sepia(97%) saturate(6926%) hue-rotate(357deg)
+    brightness(102%) contrast(114%);
+  --filter-blue: invert(60%) sepia(25%) saturate(7135%) hue-rotate(152deg)
+    brightness(102%) contrast(101%);
+}
+
+@mixin flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

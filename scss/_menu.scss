@@ -1,0 +1,65 @@
+.app {
+  &__menu {
+    width: 65px;
+    height: 100%;
+    background-color: var(--color-dark);
+    border-right: var(--border);
+    box-shadow: 5px 0 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__menu-item {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-icon {
+      width: 30px;
+      height: 30px;
+      filter: var(--filter-white);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+.key {
+  background-image: url(../assets/key.svg);
+  background-repeat: no-repeat;
+  filter: var(--filter-green);
+}
+
+.clock {
+  background-image: url(../assets/clock.svg);
+  background-repeat: no-repeat;
+}
+
+.reader {
+  background-image: url(../assets/reader.svg);
+  background-repeat: no-repeat;
+}
+
+.race {
+  background-image: url(../assets/race.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 42px;
+}
+
+.settings {
+  background-image: url(../assets/settings.svg);
+  background-repeat: no-repeat;
+}
+
+.poweroff {
+  background-image: url(../assets/poweroff.svg);
+  background-repeat: no-repeat;
+  filter: var(--filter-red);
+  height: 31px;
+}
