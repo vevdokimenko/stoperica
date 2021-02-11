@@ -361,7 +361,7 @@ body {
 }
 
 .gps {
-  background-image: url("./../../assets/gps.svg");
+  background-image: url("./../assets/gps.svg");
   width: 47px;
   height: 47px;
   background-size: 47px;
