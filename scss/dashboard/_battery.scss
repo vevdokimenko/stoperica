@@ -18,7 +18,7 @@
         margin-top: 5px;
       }
       .battery-header::before {
-        content: url("./../../assets/ext-battery.svg");
+        content: url("./../assets/ext-battery.svg");
         width: 18px;
         height: 12px;
         filter: var(--filter-yellow);
@@ -31,7 +31,7 @@
   }
   &-header {
     &::before {
-      content: url("./../../assets/battery.svg");
+      content: url("./../assets/battery.svg");
       height: 9px;
       width: 17px;
       display: inline-block;

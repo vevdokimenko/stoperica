@@ -25,7 +25,7 @@
   }
 
   &-count-satellites::before {
-    content: url("./../../assets/satellite.svg");
+    content: url("./../assets/satellite.svg");
     width: 13px;
     height: 13px;
     filter: var(--filter-white);
@@ -47,7 +47,7 @@
 }
 
 .gps-off + .gps-count-satellites + .gps-status::before {
-  content: url("./../../assets/cross.svg");
+  content: url("./../assets/cross.svg");
   filter: var(--filter-yellow);
   height: 7px;
   width: 7px;

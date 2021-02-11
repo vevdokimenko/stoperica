@@ -388,7 +388,7 @@ body {
   filter: var(--filter-yellow);
 }
 .gps-count-satellites::before {
-  content: url("./../../assets/satellite.svg");
+  content: url("./../assets/satellite.svg");
   width: 13px;
   height: 13px;
   filter: var(--filter-white);
@@ -409,7 +409,7 @@ body {
 }
 
 .gps-off + .gps-count-satellites + .gps-status::before {
-  content: url("./../../assets/cross.svg");
+  content: url("./../assets/cross.svg");
   filter: var(--filter-yellow);
   height: 7px;
   width: 7px;
@@ -462,7 +462,7 @@ body {
   color: var(--color-black);
 }
 .temp-humid-cell__badge::before {
-  content: url("./../../assets/temperature.svg");
+  content: url("./../assets/temperature.svg");
   width: 7px;
   height: 14px;
   display: inline-block;
@@ -474,7 +474,7 @@ body {
 }
 .temp-humid-cell:last-child .temp-humid-cell__badge::before {
   width: 11px;
-  content: url("./../../assets/humidity.svg");
+  content: url("./../assets/humidity.svg");
 }
 .temp-humid-cell__badge.warning::after {
   background-color: #fbb03b;
@@ -514,7 +514,7 @@ body {
   margin-top: 5px;
 }
 .battery-row:last-child .battery-header::before {
-  content: url("./../../assets/ext-battery.svg");
+  content: url("./../assets/ext-battery.svg");
   width: 18px;
   height: 12px;
   filter: var(--filter-yellow);
@@ -532,7 +532,7 @@ body {
   width: 100%;
 }
 .battery-header::before {
-  content: url("./../../assets/battery.svg");
+  content: url("./../assets/battery.svg");
   height: 9px;
   width: 17px;
   display: inline-block;
