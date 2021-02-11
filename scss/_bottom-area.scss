@@ -1,0 +1,5 @@
+.bottom-area {
+  @include flex-center-center;
+  height: 45px;
+  background-color: var(--color-dark);
+}

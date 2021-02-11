@@ -118,7 +118,6 @@
                   <p>11:12:50.350</p>
                 </div>
               </div>
-
               <div class="main-area__block-footer">
                 <p>TAGS DETECTED: <span class="blue">57</span></p>
               </div>
@@ -126,167 +125,86 @@
 
             <div class="dashboard">
               <div class="main-area__block">
-                <div class=main-area__block-header">
-                <p>Antennas</p>
-              </div>
-              <div class="main-area__block-body"></div>
-            </div>
-
-            <!--
-              
-              <div class="gps bg-dark r-10 ml-18 mb-18">
-                <div class="block-header txt-size-14">
-                  <span class="txt-light">GPS</span>
+                <div class="main-area__block-header">
+                  <p>Antennas</p>
                 </div>
-                <p class="txt-center"></p>
-
-                <p class="txt-center">
-                  <span class="txt-light txt-size-12"> 30 </span>
-                </p>
-                <p class="txt-center">
-                  <span class="txt-green">ACTIVE</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="temp-humid bg-dark r-10">
-                <div class="block-header txt-size-14">
-                  <span class="txt-light">Temperature and humidity</span>
-                </div>
-                <div class="row row--column">
-                  <div
-                    class="row row--alignment_center row--justification_center bb"
-                  >
-                    <p class="txt-center indicators br">
-                      <svg class="temperatureic fill-green">
-                        <use xlink:href="#temperature" />
-                      </svg>
-                      <span class="txt-size-7 bg-green bg-borders-text"
-                        >TEMPERATURE</span
-                      >
-                      <br />
-                      <span class="txt-light deg">42°</span>
-                      <br />
-                      <span class="txt-light txt-size-12">CPU</span>
-                    </p>
-                    <p class="txt-center indicators">
-                      <svg class="temperatureic fill-orange">
-                        <use xlink:href="#temperature" />
-                      </svg>
-                      <span class="txt-size-7 bg-orange bg-borders-text"
-                        >TEMPERATURE</span
-                      >
-                      <br />
-                      <span class="txt-light deg">51°</span>
-                      <br />
-                      <span class="txt-light txt-size-12">System</span>
-                    </p>
-                  </div>
-                  <div
-                    class="row row--alignment_center row--justification_center"
-                  >
-                    <p class="txt-center indicators br">
-                      <svg class="temperatureic fill-green">
-                        <use xlink:href="#temperature" />
-                      </svg>
-                      <span class="txt-size-7 bg-green bg-borders-text"
-                        >TEMPERATURE</span
-                      >
-                      <br />
-                      <span class="txt-light deg">20°</span>
-                      <br />
-                      <span class="txt-light txt-size-12">Reader</span>
-                    </p>
-                    <p class="txt-center indicators">
-                      <svg class="humidity fill-red">
-                        <use xlink:href="#humiditic" />
-                      </svg>
-                      <span class="txt-size-7 bg-red bg-borders-text"
-                        >HUMIDITY</span
-                      >
-
-                      <br />
-                      <span class="txt-light deg">48%</span>
-                      <br />
-                      <span class="txt-light txt-size-12">System</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="battery bg-dark r-10 ml-18">
-                <div class="block-header txt-size-14">
-                  <span class="txt-light">Battery</span>
-                </div>
-                <div>
-                  <p class="txt-center">
-                    <svg class="battery-icon fill-green">
-                      <use xlink:href="#battaryic" />
-                    </svg>
-                    <span class="txt-light">83%</span>
-                    <span class="txt-size-7 bg-blue bg-borders-text"
-                      >MAIN BATTERY</span
-                    >
-                    <span class="txt-light deg">
-                      12.54V
-                      <div class="progress">
-                        <div class="progress-value"></div>
+                <div class="main-area__block-body">
+                  <div class="antenna-wrapper">
+                    <div>
+                      <div class="antenna antenna-active">
+                        <span>ACTIVE</span>
                       </div>
-                    </span>
-                  </p>
-                  <p class="txt-center bb"></p>
-                  <p class="txt-center">
-                    <svg class="external-battery fill-yellow">
-                      <use xlink:href="#outbattaryic" />
-                    </svg>
-                    <span class="txt-size-7 bg-yellow bg-borders-text"
-                      >EXTERNAL SOURCE</span
-                    >
-                  </p>
+                      <div class="antenna-number">Antenna</div>
+                    </div>
+                    <div>
+                      <div class="antenna antenna-off">
+                        <span>OFF</span>
+                      </div>
+                      <div class="antenna-number">Antenna</div>
+                    </div>
+                    <div>
+                      <div class="antenna antenna-fail">
+                        <span>FAIL</span>
+                      </div>
+                      <div class="antenna-number">Antenna</div>
+                    </div>
+                    <div>
+                      <div class="antenna antenna-fail">
+                        <span>FAIL</span>
+                      </div>
+                      <div class="antenna-number">Antenna</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            -->
-          </div>
-        </div>
-        <div class="bottom-area bg-dark">
-          <div class="status-block br">
-            <div class="center-p">
-              <p class="txt-center">
-                <span class="txt-yellow">DISCONNECTED</span>
-              </p>
-            </div>
-          </div>
-          <div class="status-block br">
-            <div class="center-p">
-              <p>
-                <span class="txt-light">&nbsp;HR A1&nbsp;</span>
-                <span class="txt-light"><b>LTE&nbsp;</b></span>
-              </p>
-            </div>
-          </div>
-          <div class="status-block br">
-            <div class="center-p txt-center">
-              <p>
-                <span class="txt-green"> 192.168.0.68 </span>
-              </p>
+              <div class="main-area__block">
+                <div class="main-area__block-header">
+                  <p>GPS</p>
+                </div>
+                <div class="main-area__block-body"></div>
+              </div>
+              <div class="main-area__block">
+                <div class="main-area__block-header">
+                  <p>Temperature and humidity</p>
+                </div>
+                <div class="main-area__block-body"></div>
+              </div>
+              <div class="main-area__block">
+                <div class="main-area__block-header">
+                  <p>Battery</p>
+                </div>
+                <div class="main-area__block-body"></div>
+              </div>
             </div>
           </div>
-          <div class="status-block br">
-            <div class="center-p txt-center">
-              <p>
-                <span class="txt-green"> 192.168.0.68 </span>
-              </p>
-              <p>
-                <span class="txt-light"> StopericaWiFi </span>
-              </p>
+
+          <div class="bottom-area">
+            <div class="status-block br">
+              <span class="txt-yellow">DISCONNECTED</span>
             </div>
-          </div>
-          <div class="status-block">
-            <div class="center-p">
-              <p>
-                <span class="txt-light"> ONLINE</span>
-              </p>
+            <div class="status-block br">
+              <span class="txt-light">&nbsp;HR A1&nbsp;</span>
+              <span class="txt-light"><b>LTE&nbsp;</b></span>
+            </div>
+            <div class="status-block br">
+              <span class="txt-green"> 192.168.0.68 </span>
+            </div>
+            <div class="status-block br">
+              <div class="center-p txt-center">
+                <p>
+                  <span class="txt-green"> 192.168.0.68 </span>
+                </p>
+                <p>
+                  <span class="txt-light"> StopericaWiFi </span>
+                </p>
+              </div>
+            </div>
+            <div class="status-block">
+              <div class="center-p">
+                <p>
+                  <span class="txt-light"> ONLINE</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

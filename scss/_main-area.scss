@@ -30,7 +30,7 @@
     }
     &-body {
       overflow-y: scroll;
-      max-height: 268px;
+      max-height: 267px;
       @include scrollbars;
       &-item {
         display: flex;
@@ -81,4 +81,70 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 18px;
+}
+
+.dashboard .main-area__block-body {
+  overflow: inherit;
+  height: calc(168px - 37px);
+}
+
+.antenna-wrapper {
+  @include flex-center-center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  counter-reset: antenna;
+}
+
+.antenna {
+  background-image: url("./../assets/antenna.svg");
+  width: 36px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: 36px;
+  position: relative;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.antenna.antenna-active {
+  filter: var(--filter-green);
+}
+
+.antenna.antenna-off {
+  filter: var(--filter-yellow);
+}
+
+.antenna.antenna-fail {
+  filter: var(--filter-red);
+}
+
+.antenna.antenna-off span::before,
+.antenna.antenna-fail span::before {
+  content: url(" ./../assets/cross.svg ");
+  height: 7px;
+  width: 7px;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+.antenna-number {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  &::after {
+    counter-increment: antenna;
+    content: counter(antenna);
+    font-size: 3rem;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.antenna.antenna-active + .antenna-number::after {
+  border-bottom: 2px solid var(--color-green);
 }
