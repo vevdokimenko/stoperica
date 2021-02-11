@@ -4,13 +4,9 @@
     height: 100%;
     background-color: var(--color-dark);
     border-right: var(--border);
-    box-shadow: 5px 0 5px black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    position: absolute;
-    left: 0;
-    top: 0;
   }
 
   &__menu-item {

@@ -2,16 +2,116 @@
   @include flex-center-center;
   height: 45px;
   background-color: var(--color-dark);
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
 }
 
 .status-block {
   border-right: 1px solid var(--color-grey);
-  height: 100%;
-  width: 100%;
+  @include w-h-100;
   @include flex-center-center;
   &:last-child {
     border: none;
+  }
+}
+
+.usb {
+  @include w-h-100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+  filter: var(--filter-green);
+  &::before {
+    content: url(./../assets/usb.svg);
+    width: 34px;
+    height: 13px;
+    display: block;
+  }
+  & p::after {
+    content: "CONNECTED";
+  }
+  &.usb-off {
+    filter: var(--filter-yellow);
+    p::after {
+      content: "DISCONNECTED";
+    }
+    & p::before {
+      content: url(./../assets/cross.svg);
+      width: 7px;
+      height: 7px;
+      display: inline-block;
+      margin-right: 3px;
+    }
+  }
+}
+
+.mobile {
+  @include w-h-100;
+  @include flex-center-center;
+  &::before {
+    content: url(./../assets/mobile.svg);
+    width: 26px;
+    height: 16px;
+    display: block;
+    filter: var(--filter-white);
+    margin-right: 5px;
+  }
+  & span {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+}
+
+.lan {
+  @include w-h-100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  filter: var(--filter-green);
+  color: black;
+  &::before {
+    content: url(./../assets/lan.svg);
+    width: 22px;
+    height: 20px;
+    display: block;
+  }
+}
+
+.wifi {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+  filter: var(--filter-green);
+  font-size: 1rem;
+  &::before {
+    content: url(./../assets/wifi.svg);
+    width: 28px;
+    height: 20px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  & + p {
+    max-width: 75px;
+    overflow-x: scroll;
+    @include scrollbars-h;
+  }
+}
+
+.network {
+  @include w-h-100;
+  @include flex-center-center;
+  filter: var(--filter-green);
+  color: black;
+  &::before {
+    content: url(./../assets/network.svg);
+    width: 25px;
+    height: 30px;
+    display: block;
+    margin-right: 5px;
   }
 }

@@ -13,8 +13,7 @@
 }
 
 .app__content {
-  margin-left: 65px;
-  width: 100%;
+  width: calc(100% - 65px);
   display: flex;
   flex-direction: column;
 }
