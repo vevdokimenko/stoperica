@@ -56,6 +56,7 @@ body {
   --color-dark: #1c1c1e;
   --color-grey: #39383d;
   --color-yellow: #feea41;
+  --color-green: #00dfc5;
   --border: 1px solid #333333;
   --filter-green: invert(79%) sepia(14%) saturate(5739%) hue-rotate(117deg)
     brightness(91%) contrast(101%);
@@ -65,6 +66,8 @@ body {
     brightness(102%) contrast(114%);
   --filter-blue: invert(60%) sepia(25%) saturate(7135%) hue-rotate(152deg)
     brightness(102%) contrast(101%);
+  --filter-yellow: invert(84%) sepia(34%) saturate(833%) hue-rotate(358deg)
+    brightness(107%) contrast(99%);
 }
 
 .app {
@@ -223,7 +226,7 @@ body {
 }
 .main-area__block-body {
   overflow-y: scroll;
-  max-height: 268px;
+  max-height: 267px;
 }
 .main-area__block-body::-webkit-scrollbar {
   width: 5px;
@@ -282,6 +285,82 @@ body {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 18px;
+}
+
+.dashboard .main-area__block-body {
+  overflow: inherit;
+  height: calc(168px - 37px);
+}
+
+.antenna-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  counter-reset: antenna;
+}
+
+.antenna {
+  background-image: url("./../assets/antenna.svg");
+  width: 36px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: 36px;
+  position: relative;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.antenna.antenna-active {
+  filter: var(--filter-green);
+}
+
+.antenna.antenna-off {
+  filter: var(--filter-yellow);
+}
+
+.antenna.antenna-fail {
+  filter: var(--filter-red);
+}
+
+.antenna.antenna-off span::before,
+.antenna.antenna-fail span::before {
+  content: url(" ./../assets/cross.svg ");
+  height: 7px;
+  width: 7px;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+.antenna-number {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+.antenna-number::after {
+  counter-increment: antenna;
+  content: counter(antenna);
+  font-size: 3rem;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.antenna.antenna-active + .antenna-number::after {
+  border-bottom: 2px solid var(--color-green);
+}
+
+.bottom-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-color: var(--color-dark);
 }
 
 /*# sourceMappingURL=index.css.map */
