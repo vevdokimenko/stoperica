@@ -59,6 +59,7 @@ body {
   --color-yellow: #feea41;
   --color-green: #00dfc5;
   --color-red: #ff0302;
+  --color-blue: #00bfe6;
   --border: 1px solid #333333;
   --filter-green: invert(79%) sepia(14%) saturate(5739%) hue-rotate(117deg)
     brightness(91%) contrast(101%);
@@ -348,6 +349,7 @@ body {
   display: block;
   width: 50%;
   margin: 0 auto;
+  border-bottom: 2px solid var(--color-dark);
 }
 
 .antenna.antenna-off span::before,
@@ -360,7 +362,7 @@ body {
 }
 
 .antenna.antenna-active + .antenna-number::after {
-  box-shadow: 0 2px 0 var(--color-green);
+  border-bottom: 2px solid var(--color-green);
 }
 
 .gps {
@@ -496,12 +498,97 @@ body {
   line-height: 1.2rem;
 }
 
+.battery-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.battery-row {
+  height: 100%;
+  border-bottom: 1px solid var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.battery-row:last-child {
+  border: none;
+  justify-content: flex-start;
+}
+.battery-row:last-child .battery-header {
+  margin-top: 5px;
+}
+.battery-row:last-child .battery-header::before {
+  content: url("./../../assets/ext-battery.svg");
+  width: 18px;
+  height: 12px;
+  filter: var(--filter-yellow);
+  margin-top: -1px;
+}
+.battery-row:last-child .battery-header__badge {
+  background-color: var(--color-yellow);
+}
+.battery-header {
+  font-size: 1rem;
+  line-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.battery-header::before {
+  content: url("./../../assets/battery.svg");
+  height: 9px;
+  width: 17px;
+  display: inline-block;
+  margin-right: 3px;
+  filter: var(--filter-green);
+}
+.battery-header__badge {
+  background-color: var(--color-blue);
+  border-radius: 3px;
+  padding: 2px;
+  font-size: 0.8rem;
+  line-height: 0.7rem;
+  color: var(--color-black);
+}
+.battery-value {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+.battery-progress {
+  width: 90%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccffff;
+  overflow: hidden;
+}
+.battery-progress__value {
+  background-color: var(--color-green);
+  width: 83%;
+  height: 100%;
+}
+
 .bottom-area {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 45px;
   background-color: var(--color-dark);
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.status-block {
+  border-right: 1px solid var(--color-grey);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status-block:last-child {
+  border: none;
 }
 
 /*# sourceMappingURL=index.css.map */

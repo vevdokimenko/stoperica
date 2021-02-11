@@ -1,0 +1,70 @@
+.battery {
+  &-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-row {
+    height: 100%;
+    border-bottom: 1px solid var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    &:last-child {
+      border: none;
+      justify-content: flex-start;
+      .battery-header {
+        margin-top: 5px;
+      }
+      .battery-header::before {
+        content: url("./../../assets/ext-battery.svg");
+        width: 18px;
+        height: 12px;
+        filter: var(--filter-yellow);
+        margin-top: -1px;
+      }
+      .battery-header__badge {
+        background-color: var(--color-yellow);
+      }
+    }
+  }
+  &-header {
+    &::before {
+      content: url("./../../assets/battery.svg");
+      height: 9px;
+      width: 17px;
+      display: inline-block;
+      margin-right: 3px;
+      filter: var(--filter-green);
+    }
+    font-size: 1rem;
+    line-height: 1rem;
+    @include flex-center-center;
+    width: 100%;
+    &__badge {
+      background-color: var(--color-blue);
+      border-radius: 3px;
+      padding: 2px;
+      font-size: 0.8rem;
+      line-height: 0.7rem;
+      color: var(--color-black);
+    }
+  }
+  &-value {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+  &-progress {
+    width: 90%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ccffff;
+    overflow: hidden;
+    &__value {
+      background-color: var(--color-green);
+      width: 83%;
+      height: 100%;
+    }
+  }
+}
