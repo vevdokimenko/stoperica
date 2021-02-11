@@ -5,6 +5,7 @@
   --color-grey: #39383d;
   --color-yellow: #feea41;
   --color-green: #00dfc5;
+  --color-red: #ff0302;
 
   --border: 1px solid #333333;
 
@@ -18,6 +19,8 @@
     brightness(102%) contrast(101%);
   --filter-yellow: invert(84%) sepia(34%) saturate(833%) hue-rotate(358deg)
     brightness(107%) contrast(99%);
+  --filter-orange: invert(87%) sepia(22%) saturate(2686%) hue-rotate(327deg)
+    brightness(99%) contrast(100%);
 }
 
 @mixin flex-center-center {

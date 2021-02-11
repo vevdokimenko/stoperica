@@ -1,0 +1,68 @@
+.antenna {
+  &-wrapper {
+    @include flex-center-center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    counter-reset: antenna;
+  }
+  background-image: url("./../assets/antenna.svg");
+  width: 36px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: 36px;
+  position: relative;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  &.antenna {
+    &-active {
+      filter: var(--filter-green);
+    }
+    &-off {
+      filter: var(--filter-yellow);
+    }
+    &-fail {
+      filter: var(--filter-red);
+    }
+  }
+  &.antenna {
+    &-active span::after {
+      content: "ACTIVE";
+    }
+    &-off span::after {
+      content: "OFF";
+    }
+    &-fail span::after {
+      content: "FAIL";
+    }
+  }
+  &-number {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    &::after {
+      counter-increment: antenna;
+      content: counter(antenna);
+      font-size: 3rem;
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.antenna.antenna-off span::before,
+.antenna.antenna-fail span::before {
+  content: url(" ./../assets/cross.svg ");
+  height: 7px;
+  width: 7px;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+.antenna.antenna-active + .antenna-number::after {
+  box-shadow: 0 2px 0 var(--color-green);
+}

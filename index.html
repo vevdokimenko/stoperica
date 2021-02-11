@@ -132,25 +132,25 @@
                   <div class="antenna-wrapper">
                     <div>
                       <div class="antenna antenna-active">
-                        <span>ACTIVE</span>
+                        <span></span>
                       </div>
                       <div class="antenna-number">Antenna</div>
                     </div>
                     <div>
                       <div class="antenna antenna-off">
-                        <span>OFF</span>
+                        <span></span>
+                      </div>
+                      <div class="antenna-number">Antenna</div>
+                    </div>
+                    <div>
+                      <div class="antenna antenna-off">
+                        <span></span>
                       </div>
                       <div class="antenna-number">Antenna</div>
                     </div>
                     <div>
                       <div class="antenna antenna-fail">
-                        <span>FAIL</span>
-                      </div>
-                      <div class="antenna-number">Antenna</div>
-                    </div>
-                    <div>
-                      <div class="antenna antenna-fail">
-                        <span>FAIL</span>
+                        <span></span>
                       </div>
                       <div class="antenna-number">Antenna</div>
                     </div>
@@ -161,13 +161,42 @@
                 <div class="main-area__block-header">
                   <p>GPS</p>
                 </div>
-                <div class="main-area__block-body"></div>
+                <div class="main-area__block-body">
+                  <div class="gps-wrapper">
+                    <div class="gps gps-active"></div>
+                    <div class="gps-count-satellites">30</div>
+                    <div class="gps-status"></div>
+                  </div>
+                </div>
               </div>
               <div class="main-area__block">
                 <div class="main-area__block-header">
                   <p>Temperature and humidity</p>
                 </div>
-                <div class="main-area__block-body"></div>
+                <div class="main-area__block-body">
+                  <div class="temp-humid-wrapper">
+                    <div class="temp-humid-cell">
+                      <div class="temp-humid-cell__badge"></div>
+                      <div class="temp-humid-cell__value">42</div>
+                      <p class="temp-humid-cell__description">CPU</p>
+                    </div>
+                    <div class="temp-humid-cell">
+                      <div class="temp-humid-cell__badge warning"></div>
+                      <div class="temp-humid-cell__value">51</div>
+                      <p class="temp-humid-cell__description">System</p>
+                    </div>
+                    <div class="temp-humid-cell">
+                      <div class="temp-humid-cell__badge alert"></div>
+                      <div class="temp-humid-cell__value">20</div>
+                      <p class="temp-humid-cell__description">Reader</p>
+                    </div>
+                    <div class="temp-humid-cell">
+                      <div class="temp-humid-cell__badge"></div>
+                      <div class="temp-humid-cell__value">48</div>
+                      <p class="temp-humid-cell__description">System</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="main-area__block">
                 <div class="main-area__block-header">
@@ -177,7 +206,6 @@
               </div>
             </div>
           </div>
-
           <div class="bottom-area">
             <div class="status-block br">
               <span class="txt-yellow">DISCONNECTED</span>

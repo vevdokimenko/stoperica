@@ -1,0 +1,56 @@
+.gps {
+  &-wrapper {
+    @include flex-center-center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  background-image: url("./../../assets/gps.svg");
+  width: 47px;
+  height: 47px;
+  background-size: 47px;
+  background-repeat: no-repeat;
+  @include flex-center-center;
+  align-items: flex-end;
+  color: black;
+
+  &.gps-active {
+    filter: var(--filter-green);
+  }
+
+  &.gps-off {
+    filter: var(--filter-yellow);
+  }
+
+  &-count-satellites::before {
+    content: url("./../../assets/satellite.svg");
+    width: 13px;
+    height: 13px;
+    filter: var(--filter-white);
+    display: inline-block;
+    margin-right: 3px;
+  }
+}
+
+.gps-active + .gps-count-satellites + .gps-status::after {
+  content: "ACTIVE";
+  font-size: 1rem;
+  color: var(--color-green);
+}
+
+.gps-off + .gps-count-satellites + .gps-status::after {
+  content: "OFF";
+  font-size: 1rem;
+  color: var(--color-yellow);
+}
+
+.gps-off + .gps-count-satellites + .gps-status::before {
+  content: url("./../../assets/cross.svg");
+  filter: var(--filter-yellow);
+  height: 7px;
+  width: 7px;
+  margin-right: 2px;
+  display: inline-block;
+}
